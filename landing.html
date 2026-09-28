@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GARAGE GABINETE | Art Advisory Automotriz</title>
+    <style>
+        :root {
+            --bg-color: #0d0d0d;
+            --text-main: #f5f5f5;
+            --text-muted: #888888;
+            --border-color: #222222;
+            --font-mono: 'Space Mono', 'Courier New', monospace;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 20px 30px 20px;
+            text-align: center;
+        }
+
+        /* LOGO GIGANTE CENTRAL */
+        .logo-container {
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-logo {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.03);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+        }
+
+        /* ENLACE CONTENEDOR AL FORMULARIO */
+        .interactive-block {
+            text-decoration: none;
+            color: inherit;
+            max-width: 750px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+            padding: 30px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        /* EFECTO HOVER EN TODO EL BLOQUE */
+        .interactive-block:hover .hero-logo {
+            transform: scale(1.03);
+            border-color: #ffffff;
+        }
+
+        .interactive-block:hover {
+            border-color: var(--border-color);
+            background: rgba(255, 255, 255, 0.015);
+        }
+
+        .interactive-block:hover .btn-cta {
+            background: #ffffff;
+            color: #0d0d0d;
+        }
+
+        /* TEXTOS PROPORCIONALES */
+        .brand-header {
+            font-family: var(--font-mono);
+            font-size: 13px;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-size: 36px;
+            font-weight: 300;
+            line-height: 1.25;
+            letter-spacing: -0.5px;
+            max-width: 680px;
+        }
+
+        .hero-title strong {
+            font-weight: 600;
+            color: #ffffff;
+            display: block;
+        }
+
+        .hero-subtitle {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            max-width: 580px;
+            font-weight: 300;
+        }
+
+        /* BOTÓN DEL CTA */
+        .btn-cta {
+            margin-top: 15px;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 14px 28px;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            background: transparent;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        /* FOOTER SOBRIO */
+        footer {
+            font-family: var(--font-mono);
+            font-size: 10px;
+            color: var(--text-muted);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .hero-logo { width: 180px; height: 180px; }
+            .hero-title { font-size: 26px; }
+            .hero-subtitle { font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BLOQUE INTERACTIVO PRINCIPAL QUE LLEVA A INDEX.HTML -->
+    <a href="index.html" class="interactive-block">
+        
+        <!-- LOGO ENORME CENTRAL -->
+        <div class="logo-container">
+            <img src="GG901.png" alt="Garage Gabinete Emblem" class="hero-logo">
+        </div>
+
+        <span class="brand-header">Garage Gabinete · Art Advisory</span>
+
+        <h1 class="hero-title">
+            No vendemos automóviles.<br>
+            <strong>Curamos patrimonio en movimiento.</strong>
+        </h1>
+
+        <p class="hero-subtitle">
+            Registro privado y firma de asesoría para coleccionistas. Acceso exclusivo a piezas históricas, esculturas de ingeniería y chasis fuera de mercado.
+        </p>
+
+        <div class="btn-cta">
+            Ingresar al Registro de Coleccionistas →
+        </div>
+
+    </a>
+
+    <footer>
+        Garage Gabinete © 2026 · Confidencialidad Garantizada
+    </footer>
+
+</body>
+</html>
